@@ -20,6 +20,10 @@ def hello(name=None):
     return render_template('hello.html', name=name)
 
 
+@app.route('/graph', methods=['GET', 'POST'])
+def graph():
+    return render_template('graph.html')
+
 @app.route('/login', methods=['GET'])
 def login():
     if 'GET':
